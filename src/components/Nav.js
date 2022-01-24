@@ -1,4 +1,4 @@
-import Nav from '../components/Nav.css'
+import "../components/Nav.css"
 
 function Header() {
     return (

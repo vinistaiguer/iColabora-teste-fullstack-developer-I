@@ -1,4 +1,4 @@
-import CustomizedTables from './Table';
+import CustomizedTable from './Table';
 
 
 const TableTask = () => {
@@ -7,7 +7,7 @@ const TableTask = () => {
   return (
     
     <div>
-        <CustomizedTables/>
+        <CustomizedTable/>
     </div>
   );
 };

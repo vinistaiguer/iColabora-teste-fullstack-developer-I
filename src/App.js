@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+
 import './App.css';
 import Nav from './components/Nav'
 import Corpo from './components/Corpo'
