@@ -1,40 +1,10 @@
-import { useState, useEffect } from "react";
-import React from "react";
 import "../components/Table.css";
 
-import api from "../api";
+const CustomizedTables = ({data}) => {
 
-//https://mybrowseraddon.com/access-control-allow-origin.html
-function CustomizedTables() {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    api.get('/tasks', {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Authorization", 
-        "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE" ,
-        "Access-Control-Max-Age": "86400",
-        "Content-Type": "application/json;charset=UTF-8"
-    },
-    crossDomain:true,
-    })
-    .then(function (response) {
-        console.log(response);
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-  }, []);
-
-  
 
   return (
     <>
-      <button type="button" onClick={function () {
-        
-      }}>Add tasks</button>
-
       <table className="table">
         <thead>
           <tr>
@@ -70,8 +40,14 @@ function CustomizedTables() {
           <td className="table__footer">0</td>
         </tfoot>
       </table>
+
+      <button type="button" onClick={function () {
+        
+      }}>Add tasks</button>
+
+      <h2>{JSON.stringify(data)}</h2>
     </>
   );
-}
+};
 
 export default CustomizedTables;
