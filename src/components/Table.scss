@@ -9,6 +9,8 @@ $somaTarefa-bg-color: #ACE4EA;
 $somaTotal-bg-color: #424242;
 $task-bg-color: #fff;
 
+$task-hover-color:  #3fc3a2;
+
 $textValues-color: #102938;
 $tHeaderValues-color: #fff;
 $tFooterValues-color: #fff;
@@ -47,6 +49,7 @@ $valueTask-color: #fff;
     font-weight: 600;
     text-align: center;
     width:5rem;
+    transition: .25s ease-in-out;
 }
 
 @mixin descrioption-style {
@@ -57,7 +60,9 @@ $valueTask-color: #fff;
     width: 25rem;
     text-align: left;
     padding-left: 2rem;
-
+    &:hover{
+        background-color:$task-hover-color;
+    }
 }
 
 @mixin vencido-style {
